@@ -1,4 +1,4 @@
-Comndă servomotoare
+Comandă servomotoare
 
 Să se proiecteze şi să se realizeze o aplicaţie încorporată cu un microcontroller dsPIC33FJ128MC802 care să aibă următoarele caracteristici:
   - Să se efectuze achiziţii AD de pe canalul AN4 la fiecare 0,1s. Tensiunea aplicată pe pinul RB2 va fi obţinută de la un potenţiometru conectat între GND şi 3,3V.
