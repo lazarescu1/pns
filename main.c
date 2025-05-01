@@ -59,7 +59,7 @@ init_PWM1(void) {
 }
 
 void 
-__attribute__ ((interrupt, no_auto_psv)) _T3Interrupt( void ) {
+__attribute__ ((interrupt, no_auto_psv)) _T3Interrupt(void) {
 	_RB14 = ~_RB14;
 	_T3IF = 0;
 }
