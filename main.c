@@ -1,3 +1,5 @@
+/* Tema 2 - Procesoare Numerice de Semnal */
+/* Comandă servomotoare */
 #include "p33Fxxxx.h"
 
 _FOSCSEL(FNOSC_FRC);
@@ -6,25 +8,25 @@ _FWDT(FWDTEN_OFF);
 
 void 
 initPLL(void) {
-	// Configure PLL prescaler, PLL postscaler, PLL divisor
-	PLLFBD = 41; 		// M = 43 FRC
-	CLKDIVbits.PLLPRE=0;	// N1 = 2
-	CLKDIVbits.PLLPOST=0; 	// N2 = 2	
+	/* Configure PLL prescaler, PLL postscaler, PLL divisor */
+	PLLFBD = 41; 		/* M = 43 FRC */
+	CLKDIVbits.PLLPRE=0;	/* N1 = 2 */
+	CLKDIVbits.PLLPOST=0; 	/* N2 = 2 */	
 
-	// Initiate Clock Switch to Internal FRC with PLL (NOSC = 0b001)
-	__builtin_write_OSCCONH(0x01);	// FRC
-	//__builtin_write_OSCCONH(0x03);	// XT
+	/* Initiate Clock Switch to Internal FRC with PLL (NOSC = 0b001) */
+	__builtin_write_OSCCONH(0x01);	/* FRC */
+	/* __builtin_write_OSCCONH(0x03); */	/* XT */
 	__builtin_write_OSCCONL(0x01);
 
-	// Wait for Clock switch to occur
-	while (OSCCONbits.COSC != 0b001);	// FRC
-	//while (OSCCONbits.COSC != 0b011);	// XT
+	/* Wait for Clock switch to occur */
+	while (OSCCONbits.COSC != 0b001);	/* FRC */
+	/* while (OSCCONbits.COSC != 0b011); */	/* XT */
 
-	// Wait for PLL to lock
+	/* Wait for PLL to lock */
 	while(OSCCONbits.LOCK!=1) {};
 }
 
-void 
+void	/* Funcțional */
 init_Timer3(void) {
 	T3CON = 0;
 	T3CONbits.TCKPS = 1;
@@ -36,7 +38,7 @@ init_Timer3(void) {
 	T3CONbits.TON = 1;
 }
 
-void 
+void /* Are erori? */
 init_PWM1(void) {
 	P1TCONbits.PTOPS = 0;
 	P1TCONbits.PTMOD = 0;
@@ -64,6 +66,7 @@ __attribute__ ((interrupt, no_auto_psv)) _T3Interrupt(void) {
 	_T3IF = 0;
 }
 
+/* Main function */
 int 
 main(int argc, char **argv) 
 {	
