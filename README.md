@@ -8,4 +8,4 @@ Să se proiecteze şi să se realizeze o aplicaţie încorporată cu un microcon
   - Să comute starea pinului RB5 cu o perioadă de 1s. Comutarea va fi pusă în evidenţă de unul dintre LED-urile disponibile pe placă. 
 
 ### Plăcuța de Dezvoltare cu _**dsPIC33FJ32MC302**_
-<img width="600" alt="Placuta de Dezvlotare" src="https://github.com/lazarescu1/pns/blob/master/dspic.jpg">
+<img width="853" alt="Placuta de Dezvlotare" src="https://github.com/lazarescu1/pns/blob/master/dspic.jpg">
