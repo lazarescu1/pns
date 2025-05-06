@@ -66,7 +66,6 @@ __attribute__ ((interrupt, no_auto_psv)) _T3Interrupt(void) {
 	_T3IF = 0;
 }
 
-/* Main function */
 int 
 main(int argc, char **argv) 
 {	
