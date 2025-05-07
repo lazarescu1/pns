@@ -7,7 +7,7 @@ Să se proiecteze şi să se realizeze o aplicaţie încorporată cu un microcon
   - La fiecare apăsare a butonului S2 să se producă incrementarea cu 0,2ms a lăţimii impulsului semnalului PWM generat pe RB12 până la valoarea maximă de 2,2ms. Atingerea valorii de 2,2ms va determina decrementarea cu 0,2ms a lăţimii impulsului până la valoarea minimă de 0,2ms de unde va fi incrementat din nou cu 0,2ms.
   - Să comute starea pinului RB5 cu o perioadă de 1s. Comutarea va fi pusă în evidenţă de unul dintre LED-urile disponibile pe placă. 
 
-### Plăcuța de Dezvoltare cu _**dsPIC33FJ32MC302**_
+### Plăcuța de dezvoltare cu _**dsPIC33FJ32MC302**_
 <img width="853" alt="Placuta de Dezvlotare" src="https://github.com/lazarescu1/pns/blob/master/dspic.jpg">
 
 ### To Do
