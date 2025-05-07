@@ -9,3 +9,7 @@ Să se proiecteze şi să se realizeze o aplicaţie încorporată cu un microcon
 
 ### Plăcuța de Dezvoltare cu _**dsPIC33FJ32MC302**_
 <img width="853" alt="Placuta de Dezvlotare" src="https://github.com/lazarescu1/pns/blob/master/dspic.jpg">
+
+### To Do
+- [ ] 
+- [ ]
