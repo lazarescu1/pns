@@ -26,7 +26,9 @@ initPLL(void) {
 	while(OSCCONbits.LOCK!=1) {};
 }
 
-void /* Funcțional */
+/* Funcțional */
+/* Setare timer 3 să facă achiziții AD la fiecare 0.1s */
+void
 init_Timer3(void) {
 	T3CON = 0;
 	T3CONbits.TCKPS = 1;
@@ -38,7 +40,8 @@ init_Timer3(void) {
 	T3CONbits.TON = 1;
 }
 
-void /* Are erori? */
+/* Are erori? */
+void
 init_PWM1(void) {
 	P1TCONbits.PTOPS = 0;
 	P1TCONbits.PTMOD = 0;
@@ -66,15 +69,27 @@ __attribute__ ((interrupt, no_auto_psv)) _T3Interrupt(void) {
 	_T3IF = 0;
 }
 
+/* Funcția care implementeaza logica apăsării butonului S2 */
+void
+__attribute__ ((interrupt, no_auto_psv)) _INT0Interrupt (void) {
+
+    _INT0IF = 0;
+}
+
 /* Main function */
 int
 main(int argc, char **argv) 
 {	
 	TRISB = 0x0000;
+    _TRISB7 = 1;
 	PORTB = 0xF000;
 	//initPLL();
 	//init_Timer3();
 	init_PWM1(); /* Funcționează */
+
+    _INT0IF = 0;
+    _INT0IE = 1;
+    _INT0EP = 1;
 
 	while(1) {}
     return 0;
