@@ -6,7 +6,7 @@ _FOSCSEL(FNOSC_FRC);
 _FOSC(FCKSM_CSECMD & OSCIOFNC_OFF);
 _FWDT(FWDTEN_OFF);
 
-void 
+void
 initPLL(void) {
 	/* Configure PLL prescaler, PLL postscaler, PLL divisor */
 	PLLFBD = 41; 		/* M = 43 FRC */
@@ -26,7 +26,7 @@ initPLL(void) {
 	while(OSCCONbits.LOCK!=1) {};
 }
 
-void	/* Funcțional */
+void /* Funcțional */
 init_Timer3(void) {
 	T3CON = 0;
 	T3CONbits.TCKPS = 1;
@@ -60,21 +60,21 @@ init_PWM1(void) {
 	P1TCONbits.PTEN = 1;
 }
 
-void 
+void
 __attribute__ ((interrupt, no_auto_psv)) _T3Interrupt(void) {
 	_RB14 = ~_RB14;
 	_T3IF = 0;
 }
 
 /* Main function */
-int 
+int
 main(int argc, char **argv) 
 {	
 	TRISB = 0x0000;
 	PORTB = 0xF000;
 	//initPLL();
 	//init_Timer3();
-	init_PWM1();
+	init_PWM1(); /* Funcționează */
 
 	while(1) {}
     return 0;
