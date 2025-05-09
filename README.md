@@ -11,5 +11,6 @@ Să se proiecteze şi să se realizeze o aplicaţie încorporată cu un microcon
 <img width="853" alt="Placuta de Dezvlotare" src="https://github.com/lazarescu1/pns/blob/master/dspic.jpg">
 
 ### To Do
-- [ ] 
-- [ ]
+- [x] semnal PWM
+- [ ] achiziția AD  
+- [ ] logica apăsării butonului
