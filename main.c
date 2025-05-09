@@ -72,25 +72,24 @@ __attribute__ ((interrupt, no_auto_psv)) _T3Interrupt(void) {
 /* Funcția care implementeaza logica apăsării butonului S2 */
 void
 __attribute__ ((interrupt, no_auto_psv)) _INT0Interrupt (void) {
-
     _INT0IF = 0;
 }
 
 /* Main function */
 int
 main(int argc, char **argv) 
-{	
-	TRISB = 0x0000;
+{
+    TRISB = 0x0000;
     _TRISB7 = 1;
-	PORTB = 0xF000;
-	//initPLL();
-	//init_Timer3();
-	init_PWM1(); /* Funcționează */
+    PORTB = 0xF000;
+    //initPLL();
+    //init_Timer3();
+    init_PWM1(); /* Funcționează */
 
     _INT0IF = 0;
     _INT0IE = 1;
     _INT0EP = 1;
 
-	while(1) {}
+    while(1) {}
     return 0;
 }
