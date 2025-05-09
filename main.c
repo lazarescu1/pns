@@ -1,6 +1,10 @@
 /* Tema 2 - Procesoare Numerice de Semnal */
 /* Comandă servomotoare */
+#if defined(__dsPIC33F__)
 #include "p33Fxxxx.h"
+#elif defined(__dsPIC24H__)
+#include "p24Hxxxx.h"
+#endif
 
 _FOSCSEL(FNOSC_FRC);
 _FOSC(FCKSM_CSECMD & OSCIOFNC_OFF);
