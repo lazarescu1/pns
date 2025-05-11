@@ -1,5 +1,6 @@
 Digital Signals Processing project
 ==================================
+uni course website: pns.ac.tuiasi.ro
 
 Comandă servomotoare
 
@@ -18,9 +19,3 @@ care să aibă următoarele caracteristici:
     crementat din nou cu 0,2ms.
   - Să comute starea pinului RB5 cu o perioadă de 1s. Comutarea va fi pusă în evidenţă de unul dintre 
     LED-urile disponibile pe placă. 
-
-To Do
------
-- [x] semnal PWM
-- [ ] achiziția AD  
-- [ ] logica apăsării butonului
