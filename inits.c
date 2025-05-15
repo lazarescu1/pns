@@ -1,3 +1,4 @@
+/* inits.c */
 /* Functiile de initializare */
 
 #include "p33Fxxxx.h"
