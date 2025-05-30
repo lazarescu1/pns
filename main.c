@@ -20,7 +20,8 @@ main (int argc, char *argv[])
     PORTB = 0xF000;
     /* initPLL(); */
     initTIMER3();
-    initPWM1();	    
+    initPWM1();	   
+	initADC1(); 
 
     _INT0IF = 0;
     _INT0IE = 1;

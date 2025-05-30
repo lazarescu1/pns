@@ -44,12 +44,12 @@ initPWM1 (void)
     P1TCONbits.PTCKPS = 1;
     P1TMRbits.PTDIR = 0;
     P1TMRbits.PTMR = 0;
-    P1DC2 = 7380;
-    P1TPER = 73800;
+    P1DC2 = 3690;
+    P1TPER = 18450;
     PWM1CON1bits.PMOD1 = 1;
     PWM1CON1bits.PMOD2 = 1;
     PWM1CON1bits.PMOD3 = 1;
-    PWM1CON1bits.PEN1H = 0;
+    PWM1CON1bits.PEN1H = 1;
     PWM1CON1bits.PEN1L = 0; 
     PWM1CON1bits.PEN2H = 1;
     PWM1CON1bits.PEN2L = 0; 
