@@ -1,4 +1,5 @@
 Digital Signals Processing project
+
 ==================================
 uni course website: http://pns.ac.tuiasi.ro
 the board used in this project:
@@ -22,3 +23,11 @@ care să aibă următoarele caracteristici:
     crementat din nou cu 0,2ms.
   - Să comute starea pinului RB5 cu o perioadă de 1s. Comutarea va fi pusă în evidenţă de unul dintre 
     LED-urile disponibile pe placă. 
+
+TODO
+    - [x] achizitie AD la fiecare 0.1s (timer 3)
+    - [x] scalare rezultat in int. 1-2ms
+    - [x] generare semanl PWM pe PWM1H cu per. 20ms
+    - [x] generare semanl PWM pe RB12 (PWM2H) cu per. 20ms
+    - [x] scalare cu 0.2 a lat. imp. de la pasul anterior
+    - [x] comutare stare pin cu o per. de 1 s (timer 1)
