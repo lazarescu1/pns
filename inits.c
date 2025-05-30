@@ -37,6 +37,19 @@ initTIMER3 (void)
 }
 
 void
+initTIMER1 (void)
+{
+    T1CON = 0;
+    T1CONbits.TCKPS = 1;
+    TMR1 = 0;
+    PR1 = 46125;
+    _T1IF = 0;
+    _T1IP = 1;
+    _T1IE = 1;
+    T1CONbits.TON = 1;
+}
+
+void
 initPWM1 (void) 
 {
     P1TCONbits.PTOPS = 0;
