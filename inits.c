@@ -36,17 +36,20 @@ initTIMER3 (void)
     T3CONbits.TON = 1;
 }
 
+/* Setare timer 1 pentru a comuta pinul RB5 cu o per. de 1s */
 void
 initTIMER1 (void)
 {
     T1CON = 0;
-    T1CONbits.TCKPS = 1;
-    TMR1 = 0;
-    PR1 = 46125;
-    _T1IF = 0;
-    _T1IP = 1;
-    _T1IE = 1;
-    T1CONbits.TON = 1;
+    IFS0bits.T1IF = 0;
+    IPC0bits.T1IP = 1;
+    IEC0bits.T1IE = 1;
+    T1CONbits.TCS = 0;
+    T1CONbits.TGATE = 0;
+    T1CONbits.TCKPS = 0b11; // Selectare prescaler 1:256
+    TMR1= 0x0000;
+    PR1 = 14740;
+    T1CONbits.TON = 1; 
 }
 
 void
