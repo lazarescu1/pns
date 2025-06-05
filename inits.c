@@ -71,7 +71,7 @@ initPWM1 (void)
     PWM1CON1bits.PEN2L = 0; 
     PWM1CON1bits.PEN3H = 0; 
     PWM1CON1bits.PEN3L = 0; 
-    PWM1CON2bits.UDIS = 1; 
+    PWM1CON2bits.UDIS = 0; 
     P1TCONbits.PTEN = 1;
 }
 
